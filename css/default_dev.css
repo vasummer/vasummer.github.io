@@ -111,11 +111,11 @@ body {
 }
 #code .comments{
 	display:block;
-	color: #BBBBBB;
+	color: #44bb8C;
     text-align:left;
-    text-shadow:1px 1px 1px #BBBBBB;
-    font-size:18px;
-    font-weight:bold;
+    text-shadow:1px 1px 1px ;
+    font-size:17px;
+    /*font-weight:bold;*/
     word-spacing: 2px;
     letter-spacing: 1px;
     font-family:"cnword";
