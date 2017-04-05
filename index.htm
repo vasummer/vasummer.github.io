@@ -1,0 +1,127 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>Our Love Story</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<style type="text/css">
+		@font-face {
+			font-family: digit;
+            src: url('font/digital-7_mono-webfont.eot');
+            src: url('font/digital-7_mono-webfont.eot?#iefix') format('embedded-opentype'),
+                 url('font/digital-7_mono-webfont.woff') format('woff'),
+                 url('font/digital-7_mono-webfont.ttf') format('truetype'),
+                 url('font/digital-7_mono-webfont.svg#digital-7mono') format('svg');
+
+		}
+		@font-face {
+			font-family: enword;
+			src: url('font/Note_this.ttf') format("truetype");
+		}
+		@font-face {
+			font-family: cnword;
+			src: url('font/senty.ttf') format("truetype"),
+		      url('font/senty.eot?#iefix') format('embedded-opentype');
+		}
+	    @font-face {
+			font-family: angelina;
+			src: url('font/angelina.ttf') format("truetype"),
+		         url('font/angelina.eot') format("opentype");
+		}
+		
+	</style>
+	<link rel="shortcut icon" href="./favicon2.ico">
+	<link href="css/default_dev.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/garden.js"></script>
+    <script type="text/javascript" src="js/functions_dev.js"></script>
+    <script type="text/javascript" src="js/console.js"></script>
+</head>
+
+<body>
+
+	<div id="mainDiv">
+		<div id="content">
+		
+			<div id="code">
+                <span class="comments center">班扎古鲁白玛的沉默</span>
+                <span class="comments center">--扎西拉姆·多多</span>
+                <span class="comments">你见，或者不见我 </span>
+                <span class="comments">我就在那里 </span>
+                <span class="comments">不悲不喜 </span>
+                <span class="comments">你念，或者不念我 </span>
+                <span class="comments">情就在那里</span>
+                <span class="comments">不来不去</span>
+                <span class="comments">你爱，或者不爱我 </span>
+                <span class="comments">爱就在那里 </span>
+                <span class="comments">不增不减</span>
+                <span class="comments">你跟，或者不跟我 </span>
+                <span class="comments">我的手就在你手里 </span>
+                <span class="comments">不舍不弃 </span>
+                <span class="comments">来我的怀里 </span>
+                <span class="comments">或者 </span>
+                <span class="comments">让我住进你的心里 </span>
+                <span class="comments">默然 相爱 </span>
+                <span class="comments">寂静 欢喜</span>
+                </div>
+
+			<div id="loveHeart">
+				<canvas id="garden"></canvas>
+				<div id="words">
+					<div id="messages">
+						Baby, I have met you for
+						<div id="elapseClock"></div>
+					<div class="loveupersec">The clock rotation for a second.<br />I will love one more second.</div>
+					
+					</div>
+
+					<div id="loveu">
+					
+						Love u forever and ever.<br/>
+						<div class="signature">- our love </div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="copyright">
+			Copyright © 2013 <a target='_blank' href='http://www.baidu.com/'>百度</a>
+		</div>
+	</div>
+<audio id="myaudio" loop>
+  <source src="./sound/click.mp3" type="audio/mpeg" />
+</audio>
+	<script type="text/javascript">
+		var offsetX = $("#loveHeart").width() / 2;
+		var offsetY = $("#loveHeart").height() / 2 - 55;
+		var together = new Date();
+		together.setFullYear(2014, 9, 13);
+		together.setHours(12);
+		together.setMinutes(0);
+		together.setSeconds(0);
+		together.setMilliseconds(0);
+		
+		if (!document.createElement('canvas').getContext) {
+			var msg = document.createElement("div");
+			msg.id = "errorMsg";
+			msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+			document.body.appendChild(msg);
+			$("#code").css("display", "none")
+			$("#copyright").css("position", "absolute");
+			$("#copyright").css("bottom", "10px");
+		    document.execCommand("stop");
+		} else {
+			setTimeout(function () {
+				startHeartAnimation();
+			}, 1000);
+
+			timeElapse(together);
+			setInterval(function () {
+				timeElapse(together);
+			}, 500);
+
+			adjustCodePosition();
+			$("#code").typewriter();
+		}
+
+	</script>
+</body>
+</html>
