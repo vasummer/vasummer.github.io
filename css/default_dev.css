@@ -110,12 +110,13 @@ body {
 	text-align:center;
 }
 #code .comments{
+	margin: 5px;
 	display:block;
-	color: #44bb8C;
+	color: black;
     text-align:left;
-    text-shadow:1px 1px 1px ;
-    font-size:17px;
-    /*font-weight:bold;*/
+    text-shadow:1px 1px 1px black;
+    font-size:21px;
+    font-weight:bold;
     word-spacing: 2px;
     letter-spacing: 1px;
     font-family:"cnword";
